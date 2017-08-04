@@ -1,0 +1,59 @@
+spring:
+  application:
+    name: sms-service
+  profiles.active: development
+  
+---
+spring: 
+  profiles: development
+aws:
+  accesskey: "AKIAIHQOZBLJVGYFTK2Q"
+  secretkey: "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"
+  senderid: "IAMFROM"
+  smstype: "Transactional"
+template.service:
+  url: http://localhost:6015/iamfrom/v1/generatemessage 
+logging:
+  file: /opt/log/iamfrom-sms-service/application.log
+  level:
+    com.sms.service: debug 
+server: 
+  port: 6017
+  
+---
+spring: 
+  profiles: uat
+aws:
+  accesskey: "AKIAIHQOZBLJVGYFTK2Q"
+  secretkey: "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"
+  senderid: "IAMFROM"
+  smstype: "Transactional"
+template.service:
+  url: http://localhost:6015/iamfrom/v1/generatemessage 
+logging:
+  file: /opt/log/iamfrom-sms-service/application.log
+  level:
+    com.sms.service: debug 
+server: 
+  port: 6017
+   
+
+---
+spring: 
+  profiles: production
+aws:
+  accesskey: "AKIAIHQOZBLJVGYFTK2Q"
+  secretkey: "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"
+  senderid: "IAMFROM"
+  smstype: "Transactional"
+template.service:
+  url: http://localhost:6015/iamfrom/v1/generatemessage
+logging:
+  file: /opt/log/iamfrom-sms-service/application.log
+  level:
+    com.sms.service: debug 
+server: 
+  port: 6017
+ 
+ 
+   

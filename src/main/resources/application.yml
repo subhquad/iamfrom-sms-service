@@ -7,8 +7,8 @@ spring:
 spring: 
   profiles: development
 aws:
-  accesskey: "AKIAIHQOZBLJVGYFTK2Q"
-  secretkey: "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"
+  accesskey: ""
+  secretkey: ""
   senderid: "IAMFROM"
   smstype: "Transactional"
 template.service:
@@ -24,8 +24,8 @@ server:
 spring: 
   profiles: uat
 aws:
-  accesskey: "AKIAIHQOZBLJVGYFTK2Q"
-  secretkey: "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"
+  accesskey: ""
+  secretkey: ""
   senderid: "IAMFROM"
   smstype: "Transactional"
 template.service:
@@ -42,8 +42,8 @@ server:
 spring: 
   profiles: production
 aws:
-  accesskey: "AKIAIHQOZBLJVGYFTK2Q"
-  secretkey: "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"
+  accesskey: ""
+  secretkey: ""
   senderid: "IAMFROM"
   smstype: "Transactional"
 template.service:
